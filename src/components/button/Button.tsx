@@ -9,7 +9,7 @@ interface IProps {
 const Button = ({ text, to, arrow }: IProps) => {
   return (
     <a href={to} className="relative group">
-      <img src={Overlay} alt="" className="w-56 pointer-events-none" />
+      <img src={Overlay} alt="" className="min-w-56 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-black uppercase whitespace-nowrap flex items-center justify-center gap-2 text-white   ">
         {arrow ? (
           <svg
@@ -34,6 +34,7 @@ const Button = ({ text, to, arrow }: IProps) => {
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="group-hover:rotate-180 duration-1000 transition-transform"
           >
             <path
               d="M6 1H5C4.46957 1 3.96086 1.21071 3.58579 1.58579C3.21071 1.96086 3 2.46957 3 3V8C3 8.53043 2.78929 9.03914 2.41421 9.41421C2.03914 9.78929 1.53043 10 1 10C1.53043 10 2.03914 10.2107 2.41421 10.5858C2.78929 10.9609 3 11.4696 3 12V17C3 18.1 3.9 19 5 19H6"

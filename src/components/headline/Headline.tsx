@@ -1,5 +1,3 @@
-import { StringMappingType } from 'typescript';
-
 interface IHeadline {
   title: string;
 }
