@@ -9,9 +9,9 @@ import Work from './components/work/Work';
 function App() {
   return (
     <>
-      <nav className="h-32 w-full overflow-hidden grid grid-cols-3 text-white items-center px-[100px] fixed  backdrop-blur-sm z-[99]">
+      <nav className=" w-full overflow-hidden grid grid-cols justify-center text-white items-center px-[100px] fixed  backdrop-blur-sm z-[99] lg:grid-cols-3 lg:gap-0 gap-5">
         <svg
-          className=" cursor-pointer"
+          className="mx-auto cursor-pointer"
           width="151"
           height="89"
           viewBox="0 0 151 89"
@@ -35,7 +35,7 @@ function App() {
           <Button text="Get in Touch" to="#contact" arrow={true} />
         </div>
       </nav>
-      <div className=" max-w-[1920px] m-auto">
+      <div className="max-w-[1920px] m-auto">
         <section className="h-screen flex flex-col justify-center items-center relative">
           <div className="w-full -mt-[100px] ">
             <div className="text-white w-full text-center ">
@@ -54,14 +54,14 @@ function App() {
               >
                 INNOVATIVE SOLUTIONS FOR MODERN BRANDS
               </h1>
-              <p className="lg:w-[800px] md:w-[500px] mx-auto text-subtext">
+              <p className="lg:w-[800px] md:w-[500px] mx-auto w-[400px] lg:text-xl text-sm text-subtext ">
                 At Creative Solutions, we are a full-service creative agency
                 dedicated to helping modern brand succeed in today’s fast-paced
                 and competitive market.
               </p>
             </div>
           </div>
-          <div className="mt-32 w-full flex justify-center items-center absolute bottom-20">
+          <div className="mt-32 w-full flex justify-center items-center absolute bottom-20 ">
             <Grid
               number="01"
               title="Thrive development agency"
@@ -101,7 +101,7 @@ function App() {
           </div>
           <div className="pt-10">
             <Headline title="Our Mission" />
-            <div className="pt-10 flex items-start justify-center gap-5">
+            <div className="pt-10 flex gap-5 flex-col justify-center items-center lg:flex-row lg:items-start ">
               <Boxes
                 icon="info"
                 title="Introduction and Expertise"
