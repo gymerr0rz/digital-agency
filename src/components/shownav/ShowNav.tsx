@@ -7,7 +7,7 @@ interface iShow {
 const ShowNav = ({ onClose }: iShow) => {
   return (
     <div className="w-screen h-screen p-[50px] fixed z-[100] bg-[rgba(0,0,0,0.8)] backdrop-blur-sm ">
-      <div className="flex justify-end items-center" onClick={onClose}>
+      <div className="flex justify-end items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -18,6 +18,8 @@ const ShowNav = ({ onClose }: iShow) => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
+          className="cursor-pointer"
+          onClick={onClose}
         >
           <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
           <path d="m15 9-6 6" />
