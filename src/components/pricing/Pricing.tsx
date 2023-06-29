@@ -3,8 +3,11 @@ import Button from '../button/Button';
 interface IFeature {
   title: string;
 }
+interface IPricing {
+  openModal: () => void;
+}
 
-const Pricing = () => {
+const Pricing = ({ openModal }: IPricing) => {
   const Feature = ({ title }: IFeature) => {
     return (
       <li className="flex gap-2">
@@ -29,13 +32,15 @@ const Pricing = () => {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row justify-center items-center text-white text-center gap-10 whitespace-nowrap">
-      <div className="w-[400px]  bg-[rgba(255,255,255,0.03)] rounded-xl p-10 shadow-md">
-        <h1 className=" text-[24px]">Basic Website</h1>
-        <span className=" text-[48px] font-bold">£300</span>
-        <p className="text-[14px]">
-          Save 40% – <span className=" line-through">£500.00</span>
-        </p>
+    <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start text-white  gap-10  ">
+      <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700">
+        <div className="text-center">
+          <h1 className=" text-[24px]">Basic Website</h1>
+          <span className=" text-[48px] font-bold">£300</span>
+          <p className="text-[14px]">
+            Save 40% – <span className=" line-through">£500.00</span>
+          </p>
+        </div>
         <ul className="py-10 flex flex-col gap-5">
           <Feature title="1 Page" />
           <Feature title="40% Down Payment" />
@@ -44,16 +49,18 @@ const Pricing = () => {
           <Feature title="Complete Design & Deployment" />
           <Feature title="Cross Browser Compatible" />
         </ul>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center" onClick={openModal}>
           <Button to="#examples" text="Choose Plan" arrow={false} />
         </div>
       </div>
-      <div className="w-[400px]  bg-[rgba(255,255,255,0.03)] rounded-xl p-10 shadow-md">
-        <h1 className=" text-[24px]">Standard Website</h1>
-        <span className=" text-[48px] font-bold">£800</span>
-        <p className="text-[14px]">
-          Save 40% – <span className=" line-through">£1333.99</span>
-        </p>
+      <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700">
+        <div className="text-center">
+          <h1 className=" text-[24px]">Standard Website</h1>
+          <span className=" text-[48px] font-bold">£800</span>
+          <p className="text-[14px]">
+            Save 40% – <span className=" line-through">£1333.99</span>
+          </p>
+        </div>
         <ul className="py-10 flex flex-col gap-5">
           <Feature title="5 Pages" />
           <Feature title="Website Content Provided" />
@@ -64,16 +71,18 @@ const Pricing = () => {
           <Feature title="Cross Browser Compatible" />
           <Feature title="Domain/Hosting Purchase Walk Through" />
         </ul>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center" onClick={openModal}>
           <Button to="#examples" text="Choose Plan" arrow={false} />
         </div>
       </div>
-      <div className="w-[400px]  bg-[rgba(255,255,255,0.03)] rounded-xl p-10 shadow-md">
-        <h1 className=" text-[24px]">Elite Website</h1>
-        <span className=" text-[48px] font-bold">£1700</span>
-        <p className="text-[14px]">
-          Save 40% – <span className=" line-through">£2833.99</span>
-        </p>
+      <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700z">
+        <div className="text-center">
+          <h1 className=" text-[24px]">Elite Website</h1>
+          <span className=" text-[48px] font-bold">£1700</span>
+          <p className="text-[14px]">
+            Save 40% – <span className=" line-through">£2833.99</span>
+          </p>
+        </div>
         <ul className="py-10 flex flex-col gap-5">
           <Feature title="5-10 Pages" />
           <Feature title="SEO provided" />
@@ -87,7 +96,7 @@ const Pricing = () => {
           <Feature title="Free Domain Name" />
           <Feature title="Free 1 year Hosting" />
         </ul>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center" onClick={openModal}>
           <Button to="#examples" text="Choose Plan" arrow={false} />
         </div>
       </div>

@@ -18,10 +18,10 @@ const Services = ({ number, border, title }: IServices) => {
     <div
       className={`mx-auto h-[300px] w-[95%] border border-stroke flex flex-col items-center justify-center 2xl:justify-between gap-5 md:gap-0 px-10 2xl:gap-10 ${side} bg-[#232325]/10 2xl:flex-row 2xl:h-[200px] overflow-hidden`}
     >
-      <div className="flex 2xl:hover:translate-x-10 transition-transform duration-1000">
-        <span className="text-subtext pr-1">{number ? number : 'Unknown'}</span>
+      <div className="flex 2xl:hover:translate-x-10 transition-transform duration-1000 whitespace-nowrap">
+        <span className="text-subtext">{number ? number : 'Unknown'}</span>
         <h1
-          className="text-white text-[40px] lg:text-[60px] 2xl:text-[70px] xl:text-[60px] md:text-[45px] font-black uppercase whitespace-nowrap 
+          className="text-white text-[25px] lg:text-[60px] 2xl:text-[70px] xl:text-[60px] md:text-[45px] font-black uppercase
         "
         >
           {title ? title : 'Unknown'}

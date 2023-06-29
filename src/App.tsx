@@ -2,22 +2,33 @@ import { useState } from 'react';
 import './App.css';
 import Boxes from './components/boxes/Boxes';
 import Button from './components/button/Button';
-import Grid from './components/grid/Grid';
 import Headline from './components/headline/Headline';
 import Services from './components/services/Services';
 import Work from './components/work/Work';
 import ShowNav from './components/shownav/ShowNav';
 import Pricing from './components/pricing/Pricing';
+import PlanModal from './modals/planmodal/PlanModal';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
+  const [showPlanModal, setShowPlanModal] = useState(false);
 
   const onClose = () => {
     setShowNav(false);
   };
 
+  const onCloseModal = () => {
+    setShowPlanModal(false);
+  };
+
+  const openModal = () => {
+    console.log('Open modal');
+    setShowPlanModal(true);
+  };
+
   return (
     <>
+      {showPlanModal ? <PlanModal onClose={onCloseModal} /> : null}
       {showNav ? <ShowNav onClose={onClose} /> : null}
       <nav className="w-screen overflow-hidden flex justify-between lg:justify-center text-white items-center px-[50px] lg:px-[100px] fixed backdrop-blur-sm z-[99] grid-cols-2 lg:grid-cols-3 lg:grid gap-0 ">
         <div className="justify-self-start">
@@ -108,8 +119,7 @@ function App() {
             <Headline title="Services" />
             <div className="pt-10">
               <Services title="Website Development" border="top" number="01" />
-              <Services title="Social Media Managment" border="" number="02" />
-              <Services title="UI/UX Design" border="bottom" number="03" />
+              <Services title="UI/UX Design" border="bottom" number="02" />
             </div>
           </div>
         </section>
@@ -118,16 +128,16 @@ function App() {
             <Headline title="Pricing" />
             <div className="pt-10">
               <div className="pb-10">
-                <h1 className="text-center uppercase text-white text-[48px] font-black">
+                <h1 className="text-center uppercase text-white text-[48px] leading-10 md:leading-0 font-black">
                   Web design pricing plans
                 </h1>
-                <p className="text-center text-white w-[500px] mx-auto">
+                <p className="pt-5 text-center text-white w-[350px] md:w-[500px] mx-auto text-[14px]">
                   Choose the right pricing plan for your website and budget,
                   whether you’re just starting out or looking to upgrade a
                   current website.
                 </p>
               </div>
-              <Pricing />
+              <Pricing openModal={openModal} />
             </div>
           </div>
         </section>
