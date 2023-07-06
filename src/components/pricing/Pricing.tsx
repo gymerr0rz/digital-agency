@@ -1,13 +1,7 @@
-import Button from '../button/Button';
-
 interface IFeature {
   title: string;
 }
-interface IPricing {
-  openModal: () => void;
-}
-
-const Pricing = ({ openModal }: IPricing) => {
+const Pricing = () => {
   const Feature = ({ title }: IFeature) => {
     return (
       <li className="flex gap-2">
@@ -49,9 +43,6 @@ const Pricing = ({ openModal }: IPricing) => {
           <Feature title="Complete Design & Deployment" />
           <Feature title="Cross Browser Compatible" />
         </ul>
-        <div className="flex justify-center items-center" onClick={openModal}>
-          <Button to="#examples" text="Choose Plan" arrow={false} />
-        </div>
       </div>
       <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700">
         <div className="text-center">
@@ -71,9 +62,6 @@ const Pricing = ({ openModal }: IPricing) => {
           <Feature title="Cross Browser Compatible" />
           <Feature title="Domain/Hosting Purchase Walk Through" />
         </ul>
-        <div className="flex justify-center items-center" onClick={openModal}>
-          <Button to="#examples" text="Choose Plan" arrow={false} />
-        </div>
       </div>
       <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700z">
         <div className="text-center">
@@ -96,9 +84,6 @@ const Pricing = ({ openModal }: IPricing) => {
           <Feature title="Free Domain Name" />
           <Feature title="Free 1 year Hosting" />
         </ul>
-        <div className="flex justify-center items-center" onClick={openModal}>
-          <Button to="#examples" text="Choose Plan" arrow={false} />
-        </div>
       </div>
     </div>
   );

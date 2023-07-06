@@ -7,38 +7,27 @@ import Services from './components/services/Services';
 import Work from './components/work/Work';
 import ShowNav from './components/shownav/ShowNav';
 import Pricing from './components/pricing/Pricing';
-import PlanModal from './modals/planmodal/PlanModal';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
-  const [showPlanModal, setShowPlanModal] = useState(false);
 
   const onClose = () => {
     setShowNav(false);
   };
 
-  const onCloseModal = () => {
-    setShowPlanModal(false);
-  };
-
-  const openModal = () => {
-    console.log('Open modal');
-    setShowPlanModal(true);
-  };
-
   return (
     <>
-      {showPlanModal ? <PlanModal onClose={onCloseModal} /> : null}
+      {/* {showPlanModal ? <PlanModal onClose={onCloseModal} /> : null} */}
       {showNav ? <ShowNav onClose={onClose} /> : null}
-      <nav className="w-screen overflow-hidden flex justify-between lg:justify-center text-white items-center px-[50px] lg:px-[100px] fixed backdrop-blur-sm z-[99] grid-cols-2 lg:grid-cols-3 lg:grid gap-0 ">
-        <div className="justify-self-start">
+      <nav className="w-full flex justify-between lg:justify-center text-white items-center  fixed backdrop-blur-sm z-[99] grid-cols-2 lg:grid-cols-3 lg:grid gap-0 h-40 px-[50px] lg:px-[100px]">
+        <div className="justify-self-start flex">
           <svg
             width="151"
             height="89"
             viewBox="0 0 151 89"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="mx-auto cursor-pointer min-h-[144px] min-w-[144px]"
+            className=" cursor-pointer min-h-[89px] min-w-[151px] -ml-4"
           >
             <path
               d="M51.5 66H45.3125V42.5625H51.5V51.7812H59.6719V42.5625H65.8594V66H59.6719V57.1719H51.5V66ZM89.2812 66H82.4375L77.9688 58.25H75.1875V66H69V42.5625H78.4375C80.4688 42.5625 82.1979 42.8698 83.625 43.4844C85.0521 44.099 86.1406 44.9948 86.8906 46.1719C87.651 47.3385 88.0312 48.75 88.0312 50.4062C88.0312 51.9583 87.6979 53.2969 87.0312 54.4219C86.3646 55.5469 85.401 56.4323 84.1406 57.0781L89.2812 66ZM75.1875 53.4844H77.9531C79.1927 53.4844 80.125 53.2552 80.75 52.7969C81.3854 52.3281 81.7031 51.6354 81.7031 50.7188C81.7031 49.8021 81.3854 49.1146 80.75 48.6562C80.125 48.1875 79.1927 47.9531 77.9531 47.9531H75.1875V53.4844ZM97.3438 42.5625V66H91.1562V42.5625H97.3438ZM114.703 66H108.219L99.0625 42.5625H105.547L111.453 58.8125L117.359 42.5625H123.844L114.703 66ZM125.562 66V42.5625H141.188V47.9531H131.75V51.5781H140.562V56.9688H131.75V60.6094H141.344V66H125.562ZM146.656 66.3125C145.906 66.3125 145.302 66.0833 144.844 65.625C144.385 65.1667 144.156 64.5625 144.156 63.8125C144.156 63.0625 144.385 62.4583 144.844 62C145.302 61.5417 145.906 61.3125 146.656 61.3125C147.406 61.3125 148.01 61.5417 148.469 62C148.927 62.4583 149.156 63.0625 149.156 63.8125C149.156 64.5625 148.927 65.1667 148.469 65.625C148.01 66.0833 147.406 66.3125 146.656 66.3125Z"
@@ -51,8 +40,8 @@ function App() {
           </svg>
         </div>
         <div className="lg:flex gap-10 font-medium justify-self-center hidden ">
-          <a href="#home">Home</a>
           <a href="#services">Service</a>
+          <a href="#pricing">Pricing</a>
           <a href="#process">Process</a>
           <a href="#mission">Mission</a>
         </div>
@@ -84,10 +73,10 @@ function App() {
           </div>
         </div>
       </nav>
-      <div className="max-w-[1920px] m-auto ">
+      <div className="max-w-[1920px] m-auto animate-fade">
         <section
           id="home"
-          className=" flex flex-col justify-center items-center relative"
+          className="animate-fade-down animate-duration-1000 flex flex-col justify-center items-center relative"
         >
           <div className="pt-[300px] w-full ">
             <div className="text-white w-full text-center ">
@@ -123,7 +112,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="#" className="mt-10">
+        <section id="pricing" className="mt-10">
           <div>
             <Headline title="Pricing" />
             <div className="pt-10">
@@ -137,7 +126,7 @@ function App() {
                   current website.
                 </p>
               </div>
-              <Pricing openModal={openModal} />
+              <Pricing />
             </div>
           </div>
         </section>
