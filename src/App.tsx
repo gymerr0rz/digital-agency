@@ -4,9 +4,10 @@ import Boxes from './components/boxes/Boxes';
 import Button from './components/button/Button';
 import Headline from './components/headline/Headline';
 import Services from './components/services/Services';
-import Work from './components/work/Work';
 import ShowNav from './components/shownav/ShowNav';
 import Pricing from './components/pricing/Pricing';
+import WhyChooseUs from './components/whychooseus/ChooseUs';
+import Work from './components/work/Work';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -96,9 +97,8 @@ function App() {
                 INNOVATIVE SOLUTIONS FOR MODERN BRANDS
               </h1>
               <p className="lg:w-[800px] md:w-[500px] mx-auto w-[400px] lg:text-xl text-sm text-subtext ">
-                At Creative Solutions, we are a full-service creative agency
-                dedicated to helping modern brand succeed in today’s fast-paced
-                and competitive market.
+                At Thrive we are devoted to create a custom functional and
+                visually appealing website.
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ function App() {
         <section id="pricing" className="mt-10">
           <div>
             <Headline title="Pricing" />
-            <div className="pt-10">
+            <div className="pt-24">
               <div className="pb-10">
                 <h1 className="text-center uppercase text-white text-[48px] leading-10 md:leading-0 font-black">
                   Web design pricing plans
@@ -132,9 +132,17 @@ function App() {
         </section>
         <section id="process">
           <div className="pt-10">
-            <Headline title="Process" />
-            <div className="pt-[100px] pb-[100px]">
+            <Headline title="Why Choose Us" />
+            <div className="p-24">
               <Work />
+            </div>
+          </div>
+        </section>
+        <section id="whychooseus">
+          <div className="pt-10">
+            <Headline title="Why Choose Us" />
+            <div className="p-24">
+              <WhyChooseUs />
             </div>
           </div>
         </section>

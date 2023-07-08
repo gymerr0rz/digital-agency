@@ -26,7 +26,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start text-white  gap-10  ">
+    <div className="flex flex-col gap-10 xl:flex-row justify-center items-center xl:items-start text-white  ">
       <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700">
         <div className="text-center">
           <h1 className=" text-[24px]">Basic Website</h1>
