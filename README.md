@@ -2,7 +2,7 @@
 
 ### Thrive Agency Frontend
 
-<h3 align="center"><a align="center" href="https://frolicking-tanuki-4812ad.netlify.app/" target="_blank" style="color: #fff">Live Demo</a></h3>
+<h3 align="center"><a align="center" href="https://thriveagency.netlify.app/" target="_blank" style="color: #fff">Live Demo</a></h3>
 
 ### Built With
 
