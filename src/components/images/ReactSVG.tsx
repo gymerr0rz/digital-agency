@@ -2,8 +2,9 @@ const ReactSVG = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="400.02025"
+      height="350.02025"
       viewBox="0 0 583.04004 431.02025"
+      className="!max-h-[250px] lg:!max-h-[400px]"
     >
       <g>
         <path

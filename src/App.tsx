@@ -8,6 +8,8 @@ import ShowNav from './components/shownav/ShowNav';
 import Pricing from './components/pricing/Pricing';
 import WhyChooseUs from './components/whychooseus/ChooseUs';
 import Work from './components/work/Work';
+import Contact from './components/contact/Contact';
+import MessageSVG from './components/images/MessageSVG';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -80,7 +82,7 @@ function App() {
           className="animate-fade-down animate-duration-1000 flex flex-col justify-center items-center relative"
         >
           <div className="pt-[300px] w-full ">
-            <div className="text-white w-full text-center ">
+            <div className="text-white w-full text-center relative">
               <div className="h-32 w-64  bg-maincolor absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-[99] blur-[200px] "></div>
               <p className="text-maincolor">#1 Best Digital Agency</p>
               <h1
@@ -120,7 +122,7 @@ function App() {
                 <h1 className="text-center uppercase text-white text-[48px] leading-10 md:leading-0 font-black">
                   Web design pricing plans
                 </h1>
-                <p className="pt-5 text-center text-white w-[350px] md:w-[500px] mx-auto text-[14px]">
+                <p className="pt-5 text-center text-subtext w-[350px] md:w-[500px] mx-auto text-[14px]">
                   Choose the right pricing plan for your website and budget,
                   whether you’re just starting out or looking to upgrade a
                   current website.
@@ -141,7 +143,7 @@ function App() {
         <section id="whychooseus">
           <div className="pt-10">
             <Headline title="Why Choose Us" />
-            <div className="p-24">
+            <div className="py-24">
               <WhyChooseUs />
             </div>
           </div>
@@ -170,6 +172,28 @@ function App() {
                 title="Collaboration and Growth"
                 text="Collaboration is key to project success. We value transparent communication, involving clients at every stage. Long-term partnerships are important, with continuous support and maintenance even after project completion. We stay updated on UI/UX design and web development trends to provide innovative solutions that help clients grow online."
               />
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <div className="pt-10">
+            <Headline title="Contact" />
+            <div className="py-24 flex flex-col xl:flex-row justify-center items-center gap-20   xl:gap-40 overflow-hidden">
+              <div className="flex jusitfy-center items-center flex-col gap-10">
+                <div>
+                  <h1 className="text-white font-black text-center text-[3rem] uppercase">
+                    WANNA WORK WITH US?
+                  </h1>
+                  <p className="text-center text-subtext w-[350px] lg:w-[500px] mx-auto text-[14px]">
+                    Feel free to get in touch, and let's embark on a journey of
+                    creativity and innovation together!
+                  </p>
+                </div>
+                <MessageSVG />
+              </div>
+              <div>
+                <Contact />
+              </div>
             </div>
           </div>
         </section>

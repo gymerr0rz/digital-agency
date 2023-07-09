@@ -4,12 +4,17 @@ import WorkSVG from '../images/WorkSVG';
 
 const WhyChooseUs = () => {
   return (
-    <div>
-      <h1 className="text-white text-center text-[2.5rem] uppercase font-black">
+    <div className="overflow-hidden">
+      <h1 className="text-white text-center text-[3rem] uppercase font-black">
         Why Choose Us?
       </h1>
-      <div className="flex lg:flex-row flex-col justify-center gap-24 items-center py-24">
-        <div className="w-[600px] text-white flex flex-col gap-5">
+      <p className="text-center text-subtext w-[350px] lg:w-[600px] mx-auto text-[14px]">
+        Choose us over our competitors for exceptional results, unmatched
+        customer service, competitive pricing, innovative solutions, and
+        personalized customization.
+      </p>
+      <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
+        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5 order-1 lg:order-none">
           <h1 className="font-black text-[3rem] leading-10">
             Seamless Communication
           </h1>
@@ -26,9 +31,9 @@ const WhyChooseUs = () => {
         </div>
         <WorkSVG />
       </div>
-      <div className="flex lg:flex-row flex-col justify-center gap-24 items-center py-24">
+      <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
         <ReactSVG />
-        <div className="w-[600px] text-white flex flex-col gap-5">
+        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5">
           <h1 className="font-black text-[3rem] leading-10">
             Expertise in React
           </h1>
@@ -44,8 +49,8 @@ const WhyChooseUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col justify-center gap-24 items-center py-24">
-        <div className="w-[600px] text-white flex flex-col gap-5">
+      <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
+        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5 order-1 lg:order-none">
           <h1 className="font-black text-[3rem] leading-10">
             Satisfying Products
           </h1>
