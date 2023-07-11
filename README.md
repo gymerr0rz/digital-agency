@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 
-### Thrive Agency Frontend
+### Thrivify Agency Frontend
 
-<h3 align="center"><a align="center" href="https://thriveagency.netlify.app/" target="_blank" style="color: #fff">Live Demo</a></h3>
+<h3 align="center"><a align="center" href="https://thrivify.netlify.app/" target="_blank" style="color: #fff">Live Demo</a></h3>
 
 ### Built With
 
