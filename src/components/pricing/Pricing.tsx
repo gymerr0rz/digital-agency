@@ -30,9 +30,9 @@ const Pricing = () => {
       <div className="w-[350px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-10 shadow-md hover:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all duration-700">
         <div className="text-center">
           <h1 className=" text-[24px]">Basic Website</h1>
-          <span className=" text-[48px] font-bold">£300</span>
+          <span className=" text-[48px] font-bold">£500</span>
           <p className="text-[14px]">
-            Save 40% – <span className=" line-through">£500.00</span>
+            Save 40% – <span className=" line-through">£700.00</span>
           </p>
         </div>
         <ul className="py-10 flex flex-col gap-5">
@@ -55,6 +55,7 @@ const Pricing = () => {
         <ul className="py-10 flex flex-col gap-5">
           <Feature title="5 Pages" />
           <Feature title="Website Content Provided" />
+          <Feature title="SEO provided" />
           <Feature title="40% Down Payment" />
           <Feature title="1 Week Completion" />
           <Feature title="Mobile Friendly" />

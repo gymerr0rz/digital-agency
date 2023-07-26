@@ -22,3 +22,18 @@ body {
 ::selection {
   background: #5c40c9;
 }
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #5c40c9;
+}

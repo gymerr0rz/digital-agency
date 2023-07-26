@@ -10,6 +10,7 @@ import WhyChooseUs from './components/whychooseus/ChooseUs';
 import Work from './components/work/Work';
 import Contact from './components/contact/Contact';
 import MessageSVG from './components/images/MessageSVG';
+import logo from '../logo.png';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -24,29 +25,16 @@ function App() {
       {showNav ? <ShowNav onClose={onClose} /> : null}
       <nav className="w-full flex justify-between lg:justify-center text-white items-center  fixed backdrop-blur-sm z-[99] grid-cols-2 lg:grid-cols-3 lg:grid gap-0 h-40 px-[50px] lg:px-[100px]">
         <div className="justify-self-start flex">
-          <svg
-            width="151"
-            height="89"
-            viewBox="0 0 151 89"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className=" cursor-pointer min-h-[89px] min-w-[151px] -ml-4"
-          >
-            <path
-              d="M51.5 66H45.3125V42.5625H51.5V51.7812H59.6719V42.5625H65.8594V66H59.6719V57.1719H51.5V66ZM89.2812 66H82.4375L77.9688 58.25H75.1875V66H69V42.5625H78.4375C80.4688 42.5625 82.1979 42.8698 83.625 43.4844C85.0521 44.099 86.1406 44.9948 86.8906 46.1719C87.651 47.3385 88.0312 48.75 88.0312 50.4062C88.0312 51.9583 87.6979 53.2969 87.0312 54.4219C86.3646 55.5469 85.401 56.4323 84.1406 57.0781L89.2812 66ZM75.1875 53.4844H77.9531C79.1927 53.4844 80.125 53.2552 80.75 52.7969C81.3854 52.3281 81.7031 51.6354 81.7031 50.7188C81.7031 49.8021 81.3854 49.1146 80.75 48.6562C80.125 48.1875 79.1927 47.9531 77.9531 47.9531H75.1875V53.4844ZM97.3438 42.5625V66H91.1562V42.5625H97.3438ZM114.703 66H108.219L99.0625 42.5625H105.547L111.453 58.8125L117.359 42.5625H123.844L114.703 66ZM125.562 66V42.5625H141.188V47.9531H131.75V51.5781H140.562V56.9688H131.75V60.6094H141.344V66H125.562ZM146.656 66.3125C145.906 66.3125 145.302 66.0833 144.844 65.625C144.385 65.1667 144.156 64.5625 144.156 63.8125C144.156 63.0625 144.385 62.4583 144.844 62C145.302 61.5417 145.906 61.3125 146.656 61.3125C147.406 61.3125 148.01 61.5417 148.469 62C148.927 62.4583 149.156 63.0625 149.156 63.8125C149.156 64.5625 148.927 65.1667 148.469 65.625C148.01 66.0833 147.406 66.3125 146.656 66.3125Z"
-              fill="white"
-            />
-            <path
-              d="M30.2036 67.6448L19.3105 61.7727L36.4372 30.0011L24.994 23.8326L30.1097 14.3423L63.8894 32.5516L58.7736 42.0418L47.3303 35.8732L30.2036 67.6448Z"
-              fill="#5C40C9"
-            />
-          </svg>
+          <div className="flex justify-center items-center gap-3">
+            <img src={logo} alt="" className="max-h-[50px]" />
+            <h1 className="font-black text-3xl">Thrivify</h1>
+          </div>
         </div>
         <div className="lg:flex gap-10 font-medium justify-self-center hidden ">
           <a href="#services">Service</a>
           <a href="#pricing">Pricing</a>
           <a href="#process">Process</a>
-          <a href="#mission">Mission</a>
+          <a href="#contact">Contact</a>
         </div>
         <div className="justify-self-end hidden lg:block">
           <Button text="Get in Touch" to="#contact" arrow={true} />
@@ -79,12 +67,13 @@ function App() {
       <div className="max-w-[1920px] m-auto animate-fade">
         <section
           id="home"
-          className="animate-fade-down animate-duration-1000 flex flex-col justify-center items-center relative"
+          className="animate-fade-down animate-duration-1000 flex flex-col justify-center items-center relative overflow-hidden"
         >
           <div className="pt-[300px] w-full ">
             <div className="text-white w-full text-center relative">
-              <div className="h-32 w-64  bg-maincolor absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-[99] blur-[200px] "></div>
-              <p className="text-maincolor">#1 Best Digital Agency</p>
+              <p className="text-maincolor font-black uppercase">
+                #1 Best Digital Agency
+              </p>
               <h1
                 className="xl:text-[96px] lg:text-[70px] md:text-[55px] font-black md:w-[800px]
               lg:w-[900px] lg:leading-[66px]
@@ -98,8 +87,8 @@ function App() {
               >
                 INNOVATIVE SOLUTIONS FOR MODERN BRANDS
               </h1>
-              <p className="lg:w-[800px] md:w-[500px] mx-auto w-[400px] lg:text-xl text-sm text-subtext ">
-                At Thrive we are devoted to create a custom functional and
+              <p className="lg:w-[800px] md:w-[500px] mx-auto w-[400px] lg:text-base text-sm text-subtext ">
+                At Thrivify we are devoted to create a custom functional and
                 visually appealing website.
               </p>
             </div>
@@ -110,7 +99,13 @@ function App() {
             <Headline title="Services" />
             <div className="pt-10">
               <Services title="Website Development" border="top" number="01" />
-              <Services title="UI/UX Design" border="bottom" number="02" />
+              <Services title="UI/UX Design" border="" number="02" />
+              <Services
+                title="Social Media Advertising"
+                border=""
+                number="03"
+              />
+              <Services title="Copywriting" border="bottom" number="04" />
             </div>
           </div>
         </section>
@@ -134,7 +129,7 @@ function App() {
         </section>
         <section id="process">
           <div className="pt-10">
-            <Headline title="Why Choose Us" />
+            <Headline title="Process" />
             <div className="p-24">
               <Work />
             </div>
@@ -199,26 +194,14 @@ function App() {
         </section>
         <footer className="pt-20 h-[400px]">
           <div className="mx-auto w-[95%] h-10 border-l border-t border-stroke"></div>
-          <div className="px-[50px] pb-9 flex justify-between items-center lg:items-baseline lg:flex-row flex-col gap-10 lg:gap-0">
+          <div className="px-[50px] pb-9 flex justify-between items-center lg:items-start lg:flex-row flex-col gap-10 lg:gap-0">
             <div className="flex flex-col justify-start lg:justify-between items-center lg:items-start">
-              <svg
-                className="cursor-pointer"
-                width="151"
-                height="89"
-                viewBox="0 0 151 89"
-                fill="none"
-              >
-                <path
-                  d="M51.5 66H45.3125V42.5625H51.5V51.7812H59.6719V42.5625H65.8594V66H59.6719V57.1719H51.5V66ZM89.2812 66H82.4375L77.9688 58.25H75.1875V66H69V42.5625H78.4375C80.4688 42.5625 82.1979 42.8698 83.625 43.4844C85.0521 44.099 86.1406 44.9948 86.8906 46.1719C87.651 47.3385 88.0312 48.75 88.0312 50.4062C88.0312 51.9583 87.6979 53.2969 87.0312 54.4219C86.3646 55.5469 85.401 56.4323 84.1406 57.0781L89.2812 66ZM75.1875 53.4844H77.9531C79.1927 53.4844 80.125 53.2552 80.75 52.7969C81.3854 52.3281 81.7031 51.6354 81.7031 50.7188C81.7031 49.8021 81.3854 49.1146 80.75 48.6562C80.125 48.1875 79.1927 47.9531 77.9531 47.9531H75.1875V53.4844ZM97.3438 42.5625V66H91.1562V42.5625H97.3438ZM114.703 66H108.219L99.0625 42.5625H105.547L111.453 58.8125L117.359 42.5625H123.844L114.703 66ZM125.562 66V42.5625H141.188V47.9531H131.75V51.5781H140.562V56.9688H131.75V60.6094H141.344V66H125.562ZM146.656 66.3125C145.906 66.3125 145.302 66.0833 144.844 65.625C144.385 65.1667 144.156 64.5625 144.156 63.8125C144.156 63.0625 144.385 62.4583 144.844 62C145.302 61.5417 145.906 61.3125 146.656 61.3125C147.406 61.3125 148.01 61.5417 148.469 62C148.927 62.4583 149.156 63.0625 149.156 63.8125C149.156 64.5625 148.927 65.1667 148.469 65.625C148.01 66.0833 147.406 66.3125 146.656 66.3125Z"
-                  fill="white"
-                />
-                <path
-                  d="M30.2036 67.6448L19.3105 61.7727L36.4372 30.0011L24.994 23.8326L30.1097 14.3423L63.8894 32.5516L58.7736 42.0418L47.3303 35.8732L30.2036 67.6448Z"
-                  fill="#5C40C9"
-                />
-              </svg>
-              <span className="text-subtext">
-                @Thrive 2023. All Rights Reserved
+              <div className="flex justify-center items-center gap-3 pt-5">
+                <img src={logo} alt="" className="max-h-[50px]" />
+                <h1 className="font-black text-white text-3xl">Thrivify</h1>
+              </div>
+              <span className="text-subtext pt-3">
+                @Thrivify 2023. All Rights Reserved
               </span>
             </div>
             <div className="flex gap-10 text-white pr-0 lg:pr-20">

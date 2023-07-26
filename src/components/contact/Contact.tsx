@@ -16,8 +16,21 @@ const Contact = () => {
         className="flex flex-col text-white justify-center items-center gap-5"
       >
         <div className="flex flex-col">
+          <label htmlFor="name" className="text-subtext">
+            Your Name
+          </label>
+          <input
+            id="name"
+            type="name"
+            name="name"
+            className="w-[250px] lg:w-[450px]  bg-[rgba(255,255,255,0.01)] rounded-xl p-5  focus:border-maincolor border-[rgba(255,255,255,0.01)] border-2 transition-all outline-none duration-700 resize-none"
+            placeholder="ex. John"
+          />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
+        </div>
+        <div className="flex flex-col">
           <label htmlFor="email" className="text-subtext">
-            Email
+            Your Email
           </label>
           <input
             id="email"

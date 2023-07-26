@@ -14,8 +14,8 @@ const WhyChooseUs = () => {
         personalized customization.
       </p>
       <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
-        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5 order-1 lg:order-none">
-          <h1 className="font-black text-[3rem] leading-10">
+        <div className="w-[350px] lg:w-[600px] text-white flex justify-center items-center text-center lg:text-left flex-col gap-5 order-1 lg:order-none">
+          <h1 className="font-black text-[2.5rem] uppercase text-maincolor leading-[40px]">
             Seamless Communication
           </h1>
           <p className="text-md">
@@ -26,15 +26,16 @@ const WhyChooseUs = () => {
             your vision, goals, and expectations from the start. We provide
             regular progress updates, facilitate open dialogue, and actively
             seek your feedback at every stage of the development process. This
-            approach ensures that we stay aligned with your
+            approach ensures that we stay aligned with your objectives and
+            deliver a product that exceeds your expectations.
           </p>
         </div>
         <WorkSVG />
       </div>
       <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
         <ReactSVG />
-        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5">
-          <h1 className="font-black text-[3rem] leading-10">
+        <div className="w-[350px] lg:w-[600px] text-white text-center lg:text-right flex flex-col gap-5">
+          <h1 className="font-black text-[2.5rem] uppercase text-maincolor leading-[40px]">
             Expertise in React
           </h1>
           <p className="text-md">
@@ -49,9 +50,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex lg:flex-row text-center lg:text-left flex-col justify-center gap-24 items-center py-24">
-        <div className="w-[350px] lg:w-[600px] text-white flex flex-col gap-5 order-1 lg:order-none">
-          <h1 className="font-black text-[3rem] leading-10">
+      <div className="flex lg:flex-row  flex-col justify-center gap-24 items-center py-24">
+        <div className="w-[350px] lg:w-[600px] text-white text-center lg:text-left flex flex-col gap-5 order-1 lg:order-none">
+          <h1 className="font-black text-[2.5rem] uppercase text-maincolor leading-[40px]">
             Satisfying Products
           </h1>
           <p className="text-md">

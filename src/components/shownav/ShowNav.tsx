@@ -27,14 +27,17 @@ const ShowNav = ({ onClose }: iShow) => {
         </svg>
       </div>
       <div className="flex-col gap-5 mt-10 font-medium text-white mb-10 flex justify-center items-center">
-        <a href="#home" onClick={onClose}>
-          Home
-        </a>
         <a href="#services" onClick={onClose}>
           Service
         </a>
-        <a href="#about" onClick={onClose}>
-          About
+        <a href="#pricing" onClick={onClose}>
+          Pricing
+        </a>
+        <a href="#process" onClick={onClose}>
+          Process
+        </a>
+        <a href="#contact" onClick={onClose}>
+          Contact
         </a>
       </div>
       <div className="flex justify-center items-center">
